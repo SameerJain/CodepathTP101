@@ -88,6 +88,7 @@ black_jack(23)
 # Problem 9: First Item
 
 
+
 def get_first(lst):
     return (lst[0])
 
@@ -105,16 +106,30 @@ def get_last(lst):
 print(get_last(input))
 
 # problem 11: Counter
-print("\n")
-
-
 def counter(stop):
-
-                        for i in range(1, stop + 1):
-    print(          i)
+    for i in range(1, stop + 1):
+        print(i)
 counter(7)
-
+print("Test")
 #Problem 12:Sum of 1 to 10
+def sum_ten():
+    num = 0
+    for i in range(1,11):
+        num += i
+    print(num)
+sum_ten()
+
 #Problem 13:Total Sum
+def sum_postive_numbers(input):
+    num = 0
+    for i in range(1,input + 1):
+        num += i
+    print(num)
+sum_postive_numbers(6)
 #Problem 14:Total Sum in range
+def sum_range(start,stop):
+    num = 0
+    for i in range(start,stop+1):
+        num += i
+    print()
 #Problem 15:Negative Numbers
