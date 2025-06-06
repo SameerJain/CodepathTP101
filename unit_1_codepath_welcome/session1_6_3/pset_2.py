@@ -122,11 +122,49 @@ def countdown(m,n):
 countdown(52,44)
 
 #Problem 10: Calculate Power
-def power()
-
+def power(base,exponent):
+    if exponent == 1:
+        return base
+    return base * power(base,exponent - 1)
+print("\n\n\n\n\n")
+print(power(3,3))
 #Problem 11: Length of List
-#Problem 12: Calculate Factorial
-#Problem 13: Calculate the Squares 
-#Problem 14: Multiply List 
-#Problem 15: Count Evens 
+def list_length(lst):
+    list_counter = 0
+    for i in lst:
+        list_counter += 1
+        pass
+    return list_counter
+test_list = [213,32,12,3]
+print(list_length(test_list))
 
+#Problem 12: Calculate Factorial
+def factorial(n):
+    if n == 1:
+        return n
+    return n * factorial(n-1)
+print("\n\n\n\n" + str(factorial(6)))
+#Problem 13: Calculate the Squares
+def squares(nums):
+    for i in range(len(nums)):
+        nums[i] *= nums[i]
+    return nums
+
+#print(squares(test_list))
+        
+#Problem 14: Multiply List 
+def multiply_lst(lst,multiplier):
+    for i in range(len(lst)):
+        lst[i] *= multiplier
+    return lst
+
+print(multiply_lst(test_list,3))
+#Problem 15: Count Evens 
+def count_evens(lst):
+    evens_counter = 0
+    for num in lst:
+        if num % 2 == 0:
+            evens_counter += 1
+    return evens_counter
+print("\n\n\n\n\n\n")
+print(count_evens([2,4,6,8]))
