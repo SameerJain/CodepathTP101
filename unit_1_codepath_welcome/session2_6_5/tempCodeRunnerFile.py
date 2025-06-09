@@ -1,4 +1,4 @@
-# # Problem 1:Convert Temperature
+# Problem 1:Convert Temperature
 # def convertTemp(celsius):
 #     kelvin = celsius + 273.15
 #     fahrenheit = celsius * 1.80 + 32.00
@@ -59,21 +59,3 @@
 # nums = [2,4,1,0,5]
 # missing_num = find_missing(nums)
 # print(f"Orginal: {nums}")
-
-# Problem 6: Reverse List
-def reverse_list(lst):
-    result = []
-    for i in range(len(lst)-1,-1,-1):
-        result.append(lst[i])
-    return result
-test_lst1 = [1,2,3,4]
-print(reverse_list(test_lst1))
-
-
-# Problem 7: Get Odd Numbers
-
-# Problem 8: Multiplication Table
-# Problem 8: Create Number 
-# Problem 10: Move Zeros 
-# Problem 11: Odd Indices
-# Problem 12: List Occurrences
