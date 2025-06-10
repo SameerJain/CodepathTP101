@@ -101,8 +101,44 @@ def list_to_number(digits):
     return result
 
 digits = [1,0,3,4,4,1,4,9]
-print("hello", list_to_number(digits))
+# print("hello", list_to_number(digits))
 # Problem 10: Move Zeros 
+'''
+-iterate through list
+-check how many non-zeroes there are
+-iterate thru list again 
+-remove its a zero in a temp var
+-append temp var to the end
+-once we reach arr[num of non-zeroes] we know we are done
+'''
+def move_zeroes(nums):
+    temp_var = 0
+    for i in range(len(nums)):
+        if nums[i] == 0:
+            temp_var = nums[i]
+            nums.remove(nums[i])
+            nums.append(temp_var)
+    return nums
+
+test_nums = [1,0,2,3,0,0,0,123123,0,0,0,4]
+
 
 # Problem 11: Odd Indices
+def print_odd_indices(nums):
+    for i in range(len(nums)):
+        if i % 2 == 1:
+            print(i, nums[i])
+print_odd_indices([1,2,3,4,5])
+
 # Problem 12: List Occurrences
+lst = [1,2,6,5,2,1,3,2,2]
+
+def find_all_occurrences(lst,target):
+    result = []
+    for i in range(len(lst)):
+        if lst[i] == target:
+            result.append(i)
+    return result
+
+print(find_all_occurrences(lst,2))
+    
