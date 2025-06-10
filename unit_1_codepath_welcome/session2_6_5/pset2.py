@@ -67,13 +67,42 @@ def reverse_list(lst):
         result.append(lst[i])
     return result
 test_lst1 = [1,2,3,4]
-print(reverse_list(test_lst1))
+#print(reverse_list(test_lst1))
 
 
 # Problem 7: Get Odd Numbers
+def get_odds(nums):
+    result = []
+    for num in nums:
+        if num % 2 == 1:
+            result.append(num)
+    return result
 
+# print(get_odds([5,1,5,2,3,222]))
 # Problem 8: Multiplication Table
-# Problem 8: Create Number 
+def multiplication_table(num):
+    for i in range(1,11):
+        print(num * i)
+        
+# multiplication_table(7)
+# Problem 9: Create Number 
+'''
+figure out how many numbers in digits
+
+'''
+def list_to_number(digits):
+    result = 0
+    multiplier_value = len(digits) - 1
+    for i in range(len(digits)):
+        result += digits[i] * 10 ** multiplier_value
+        multiplier_value -=1
+        print(result)
+        
+    return result
+
+digits = [1,0,3,4,4,1,4,9]
+print("hello", list_to_number(digits))
 # Problem 10: Move Zeros 
+
 # Problem 11: Odd Indices
 # Problem 12: List Occurrences
