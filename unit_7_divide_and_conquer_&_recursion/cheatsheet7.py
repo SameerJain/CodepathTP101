@@ -1,3 +1,4 @@
+'''
 Unit 7 Cheatsheet
 Here is a helpful cheatsheet outlining common concepts and Python functions that will help you in your problem solving journey! Use this as reference as you solve the breakout problems below. This is not an exhaustive list of all syntax and concepts you will need to know; it only includes specialized knowledge needed to ace Unit 7. You will also need to know the required syntax and techniques covered in Units 1-6. In addition, by the end of this unit you should know how to:
 
@@ -13,22 +14,25 @@ Floor Division
 The // operator is also known as floor division. x // y returns the result of x divided by y rounded down to the nearest whole integer.
 
 Example Usage:
+'''
+print(5 // 2)  # Prints 2 because 5 / 2 = 2.5 which rounded down is 2
 
-print(5 // 2) # Prints 2 because 5 / 2 = 2.5 which rounded down is 2
-
-print(10 // 2) # Prints 5 because 10 // 2 = 5 which is already an integer
-
+print(10 // 2)  # Prints 5 because 10 // 2 = 5 which is already an integer
+'''
 Recursion
 ‼️ This material is in scope for the Unit 7 assessment.
 Put simply, recursion is the process of a function calling itself.
 
 Example Usage:
+'''
 
 
 def recursive_crash():
     print("I will run forever")
-    recursive_crash() 
+    recursive_crash()
 
+
+'''
 If we call the function recursive_crash() above, it will print "I will run forever" and then call itself, causing the function to execute again. "I will run forever" will repeat again, and the function will call itself again. This will happen over and over until your program crashes.
 
 
@@ -42,19 +46,22 @@ In contrast, recursion uses a top-down approach. It takes the overall problem an
 Example Usage:
 
 Iterative Approach	Recursive Approach
+'''
+
 def count_iterative(num):
     i = 1
     while i <= num:
         print(f"Count {i}!")
         i += 1
-        
+
+
 def count_recursive(num):
     print(f"Count {num}!")
     if num == 1:
         return
     else:
-       count_recursive(num - 1)
-        
+        count_recursive(num - 1)
+'''      
 Input: 5
 Output:
 "Count 1!"
@@ -79,6 +86,7 @@ Every recursive function has at least two main components:
 
 The base case End condition. Describes the condition and code that should run when we want our function to stop making recursive calls. Often the base case is the smallest subproblem of the overall problem we are working to solve.
 The recursive case Code to execute in all other cases. The recursive case calls the function again, but usually passes in a smaller or simpler input to move us closer to reaching the base case.
+'''
 def count_recursive(num):
     # Action to repeat
     print(f"Count {num}!")
@@ -90,61 +98,63 @@ def count_recursive(num):
 
     # Recursive Case: If num is larger than 1
     else:
-       # Call count_recursive() again, but decrement the input value by 1
-       count_recursive(num - 1)
+    # Call count_recursive() again, but decrement the input value by 1
+        count_recursive(num - 1)
+'''
 A recursive function may have multiple base cases. This is useful when we have multiple conditions under which we want to stop repeating our function body and want to specify different behavior for each condition.
 
 Example Usage:
-
+'''
 # Check if a given value is odd
 def is_odd(n):
-
-  # Base Case 1: n is 0, which is not odd  
-  if n == 0:
+# Base Case 1: n is 0, which is not odd  
+    if n == 0:
     # Return False
-    return False
-  # Base Case 2: n is 1, which is odd
-  if n == 1:
+        return False
+# Base Case 2: n is 1, which is odd
+    if n == 1:
     # Return True
-    return True
+        return True
 
-  # Recursive case: n is greater than 1
-  else:
+# Recursive case: n is greater than 1
+    else:
     # Check if the input subtracted by 2 is odd
     # If n - 2 is odd, n must also be odd
-    return is_odd(n - 2)
+        return is_odd(n - 2)
 
 test_odd_value = is_odd(5) 
 test_even_value = is_odd(6)
 
 print(test_odd_value) # Prints True
 print(test_even_value) # Prints False
+'''
 A recursive function may also have multiple recursive cases. This is useful when we want to specify different behavior depending on some condition(s).
 
 Example Usage:
-
+'''
 # Count the number of even values in a list
 def count_evens(lst):
-  # Base case: The list is empty
-  if not lst:
+# Base case: The list is empty
+    if not lst:
     # There are 0 even values in the list
-    return 0
-  
-  # Recursive Case 1: The first value in the list is even
-  if lst[0] % 2 == 0:
+        return 0
+
+# Recursive Case 1: The first value in the list is even
+    if lst[0] % 2 == 0:
     # Count of even values is 1 + the count of evens in the rest of the list
-    return 1 + count_evens(lst[1:])
-  # Recursive Case 2: The first value in the list is odd
-  else:
+        return 1 + count_evens(lst[1:])
+# Recursive Case 2: The first value in the list is odd
+    else:
     # Count of even values is the count of evens in the rest of the list
-    return count_evens(lst[1:])
+        return count_evens(lst[1:])
 
 output = count_evens([1, 2, 3, 4])
 print(output) # Prints 2
+'''
 When we create iterative algorithms, we often use an accumulator variable to collect our final result.
 
 Example Usage:
-
+'''
 def count_evens_iterative(lst):
     # Accumulator variable
     count = 0
@@ -152,13 +162,15 @@ def count_evens_iterative(lst):
         if num % 2 == 0:
             count += 1
     return count
+'''
 In recursive functions, we instead use the return statement as our 'accumulator variable'. The return statements combines a specified return value for the current function call with the results of recursive calls to generate the final output value.
 
 Example Usage:
-
-  if lst[0] % 2 == 0:
+'''
+if lst[0] % 2 == 0:
     # Count of even values is 1 + the count of evens in the rest of the list
     return 1 + count_evens(lst[1:])
+'''
 In the snippet of the recursive implementation of count_evens() above, the output value is 1 plus the return value of count_evens(lst[1:]).
 
 
@@ -166,24 +178,26 @@ Recursive Driver and Helper Functions
 It is common to want to pass in extra data to our recursive calls. In this case, we can create a recursive helper function that takes in additional parameters so that we can pass along this extra data.
 
 Example Usage:
-
+'''
 def partition_evens_odds(lst):
-  return recurse_partition(lst, [], [])
+    return recurse_partition(lst, [], [])
 
 def recurse_partition(lst, evens, odds):
-  if not lst:
-      return evens, odds
-  if lst[0] % 2 == 0:
-      evens.append(lst[0])
-  else:
-      odds.append(lst[0])
-  return recurse_partition(lst[1:], evens, odds)
+    if not lst:
+        return evens, odds
+    if lst[0] % 2 == 0:
+        evens.append(lst[0])
+    else:
+        odds.append(lst[0])
+    return recurse_partition(lst[1:], evens, odds)
 
 
 lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 evens, odds = partition_evens_odds(lst)
 print(evens) # Prints: [2, 4, 6, 8]
 print(odds)  # Prints: [1, 3, 5, 7, 9]
+
+'''
 partition_even_odds() takes in a given list and returns two new lists: one with all the odd values in the input list, and one with all the even values in the input list. It only accepts one parameter: the input list.
 
 To solve the problem recursively, we need to pass in our result lists evens and odds to each recursive call so that we can append new values to the lists. But those lists don't exist yet! So we create a helper function that takes in two additional parameters, evens and odds. Then the main 'driver' function creates initial values (empty lists) to pass in as arguments and calls the helper function which executes the recursive logic.
@@ -204,23 +218,24 @@ def partition_evens_odds(lst):
 When we use recursive helper functions, the driver function usually does very little. It may handle a base case, but it's primary job is to make the first call to the recursive helper function, passing in initial values for any parameters the helper function needs that were not passed to the driver function. The helper function then does all the work!
 
 We could solve this problem without the helper function:
-
+'''
 def partition_evens_odds(lst, evens, odds):
-  if not lst:
-      return evens, odds
-  if lst[0] % 2 == 0:
-      evens.append(lst[0])
-  else:
-      odds.append(lst[0])
-  return partition_evens_odds(lst[1:], evens, odds)
+    if not lst:
+        return evens, odds
+    if lst[0] % 2 == 0:
+        evens.append(lst[0])
+    else:
+        odds.append(lst[0])
+    return partition_evens_odds(lst[1:], evens, odds)
 
 
 lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 evens, odds = partition_evens_odds(lst, [], []) # User has to pass in empty lists to hold result
 print(evens) # Prints: [2, 4, 6, 8]
 print(odds)  # Prints: [1, 3, 5, 7, 9]
-However, in this case the user needs to pass in an initial list for the evens and odds parameter, which doesn't provide a good user experience.
 
+'''
+However, in this case the user needs to pass in an initial list for the evens and odds parameter, which doesn't provide a good user experience.
 
 Divide & Conquer Algorithms
 ‼️ This material is in scope for the Unit 7 assessment.
@@ -272,7 +287,7 @@ The Call Stack
 When we make function calls, the body of the called function may call other functions, which may themselves call even more functions.
 
 For example, in the following snippet, function_a() calls function_b() which then calls function_c().
-
+'''
 def function_c():
     print("I'm Function C!")
     print("Function C is done executing!")
@@ -288,6 +303,7 @@ def function_a():
     print("Function A is done executing!")
 
 function_a()
+'''
 When one function calls a second function, the first function pauses executing any remaining steps until the second function is finished executing. Running the above example, results in the following output:
 
 I'm Function A!
@@ -316,3 +332,4 @@ The call stack takes up memory! Stacks, including the call stack, are just a spe
 For example in the sum_zero_to_n() function pictured above, we can say n is the size of the input integer. Approximately n function calls get added to the call stack before we begin removing functions from the call stack, so the space complexity of sum_zero_to_n() is O(n).
 
 The call stack of non-recursive functions also takes up space, but it is almost always a constant amount of space.
+'''

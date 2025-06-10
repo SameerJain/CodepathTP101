@@ -44,13 +44,17 @@ create_dictionary(keys,values)
 
 #! Problem 3: Print Pair 
 def print_pair(dictionary,target):
-    pass
+    
+    
 
 dictionary = {"Spongebob": "Squarepants","Squidward":"Tentacles","Patrick":"Star"}
 
 print_pair(dictionary,"Patrick")
 print_pair(dictionary,"Plankton")
 print_pair(dictionary,"Spongebob")
+
+
+
 #! Problem 4: Keys Versus Values
 def keys_v_values(dictionary):
     pass
