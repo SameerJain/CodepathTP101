@@ -44,10 +44,17 @@ create_dictionary(keys,values)
 
 #! Problem 3: Print Pair 
 def print_pair(dictionary,target):
-    
+    found = False
+    for i in dictionary:
+        if(i == target):
+            print(f"Key: {i}\nValue: {dictionary.get(i)}")
+            found = True
+    if not found:
+        print("That pair does not exist!")
     
 
 dictionary = {"Spongebob": "Squarepants","Squidward":"Tentacles","Patrick":"Star"}
+
 
 print_pair(dictionary,"Patrick")
 print_pair(dictionary,"Plankton")
@@ -55,12 +62,21 @@ print_pair(dictionary,"Spongebob")
 
 
 
+
 #! Problem 4: Keys Versus Values
 def keys_v_values(dictionary):
-    pass
-
+    key_sum,value_sum = 0,0
+    for key, value in dictionary.items():
+        key_sum += key
+        value_sum += value
+    if key_sum > value_sum:
+        return "keys"
+    elif key_sum < value_sum:
+        return "values"
+    else:
+        return "balanced"
 dictionary1 = {1:10,2:20,3:30,4:40,5:50,6:60}
-greater_sum = keys_v_values(dictionary)
+greater_sum = keys_v_values(dictionary1)
 print(greater_sum)
 
 dictionary2 = {100:10,200:20,300:30,400:40,500:50,600:60}
@@ -69,7 +85,9 @@ print(greater_sum)
 
 #! Problem 5: Restock Inventory
 def restock_inventory(current_inventory,restock_list):
-    pass
+    for item in current_inventory:
+        
+    return current_inventory
 
 current_inventory = {
     "appples":30,
