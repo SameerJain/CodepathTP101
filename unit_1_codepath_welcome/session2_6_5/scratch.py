@@ -1,20 +1,16 @@
-# Problem 5: Missing Number
 '''
-sort list
-two pointers to compare
-if value2 is more than 1 greater than value1
-loop between the two values 
-append missing values to result list 
+init total
+iterate thru dict values
+if % 2 == 0 
+    add to total
 '''
-def find_missing(nums):
-    nums.sort()
-    result = []
-    for i in range(len(nums)-1):
-        if nums[i+1] - nums[i] > 1:
-            for j in range(nums[i]+1,nums[i+1]):
-                result.append(j)
-    return result
+def sum_even_values(dictionary):
+    total = 0
+    for value in dictionary.values():
+        if value % 2 == 0:
+            total += value    
+    return total
 
-nums = [2,4,1,0,9]
-# 0 1 2 4 5 
-print(find_missing(nums))
+
+dictionary = {"a": 4, "b": 1, "c": 2, "d": 8, }
+print(sum_even_values(dictionary))

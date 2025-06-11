@@ -84,8 +84,12 @@ greater_sum = keys_v_values(dictionary2)
 print(greater_sum)
 
 #! Problem 5: Restock Inventory
+'''
+
+'''
 def restock_inventory(current_inventory,restock_list):
-    for item in current_inventory:
+    for key,value in current_inventory.items():
+        current_inventory[key] = restock_list[key]
         
     return current_inventory
 
