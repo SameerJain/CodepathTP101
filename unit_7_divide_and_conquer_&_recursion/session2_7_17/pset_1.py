@@ -1,8 +1,8 @@
 #! Problem 1: Neatly Nested 
-How Many 1s
-Binary Search 4
-Count Rotations
-Merge Sort 1
-Circle Search 
+#! Problem 2: How Many 1s
+#! Problem 3: Binary Search 4
+#! Problem 4: Count Rotations
+#! Problem 5: Merge Sort 1
+#! Problem 6: Circle Search 
 
 

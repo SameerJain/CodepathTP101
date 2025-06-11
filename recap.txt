@@ -1,0 +1,3 @@
+all the different ways to iterate thru dictionaries
+all the different ways to access dictionaries
+unit 2 session 2 problem set 3 question 1 mountain peak
