@@ -40,7 +40,7 @@ def create_dictionary(keys,values):
 keys = ["peanut","dragon","star","pop","space"]
 values = ["butter","fly","fish","corn","ship"]
 
-create_dictionary(keys,values)
+#create_dictionary(keys,values)
 
 #! Problem 3: Print Pair 
 def print_pair(dictionary,target):
@@ -56,9 +56,9 @@ def print_pair(dictionary,target):
 dictionary = {"Spongebob": "Squarepants","Squidward":"Tentacles","Patrick":"Star"}
 
 
-print_pair(dictionary,"Patrick")
-print_pair(dictionary,"Plankton")
-print_pair(dictionary,"Spongebob")
+# print_pair(dictionary,"Patrick")
+# print_pair(dictionary,"Plankton")
+# print_pair(dictionary,"Spongebob")
 
 
 
@@ -77,24 +77,28 @@ def keys_v_values(dictionary):
         return "balanced"
 dictionary1 = {1:10,2:20,3:30,4:40,5:50,6:60}
 greater_sum = keys_v_values(dictionary1)
-print(greater_sum)
+#print(greater_sum)
 
 dictionary2 = {100:10,200:20,300:30,400:40,500:50,600:60}
 greater_sum = keys_v_values(dictionary2)
-print(greater_sum)
+#print(greater_sum)
 
 #! Problem 5: Restock Inventory
 '''
-
+iterate thru current inventory 
+if we have the key already we add to it
+otherwise we create the key and add the value
 '''
 def restock_inventory(current_inventory,restock_list):
-    for key,value in current_inventory.items():
-        current_inventory[key] = restock_list[key]
-        
+    for key,value in restock_list.items():
+        if key in current_inventory.keys():
+            current_inventory[key] += value
+        else:
+            current_inventory[key] = value
     return current_inventory
 
 current_inventory = {
-    "appples":30,
+    "apples":30,
     "bananas":15,
     "oranges":10
 }
@@ -106,9 +110,23 @@ restock_list = {
 }
 
 # print(restock_inventory(current_inventory,restock_list))
+
 #! Problem 6: Calculate GPA
 def calculate_gpa(report_card):
-    pass
+    
+    grade_values = {
+        "A": 4.0,
+        "B": 3.0,
+        "C": 2.0,
+        "D": 1.0,
+    }
+    
+    total_points = 0
+    
+    for value in report_card.values():
+        total_points += grade_values[value]
+        
+    return total_points / len(report_card.values()) 
 
 report_card = {"Math":"A","Science":"C","History":"A","Art":"B","English":"B","Spanish":"A"}
 
@@ -116,7 +134,7 @@ report_card = {"Math":"A","Science":"C","History":"A","Art":"B","English":"B","S
 
 #! Problem 7: Best Book 
 def highest_rated(books):
-    pass
+    print(books)
 
 books = [                  
     {"Title": "Tomorrow, and Tomorrow, and Tomorrow",
@@ -136,7 +154,7 @@ books = [
         "Rating": 4.40
     }
 ]
-# print(highest_rated(books))
+print(highest_rated(books))
 #! Problem 8: Index Value Map 
 def index_to_value_map(lst):
     pass
