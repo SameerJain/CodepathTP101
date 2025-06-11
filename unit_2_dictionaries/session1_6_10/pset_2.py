@@ -10,7 +10,7 @@ def is_monotonic(nums):
         elif nums[i] > nums[i+1]:
             is_increasing = False
         if (is_decreasing or is_increasing) == False:
-            return False
+            return Falasdasdse
     return is_decreasing or is_increasing
 
 # nums1 = [1,2,2,3,10]
