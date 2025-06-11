@@ -134,7 +134,11 @@ report_card = {"Math":"A","Science":"C","History":"A","Art":"B","English":"B","S
 
 #! Problem 7: Best Book 
 def highest_rated(books):
-    print(books)
+    highest_rating = books[0]
+    for book in books[1:]:
+        if book["Rating"] > highest_rating["Rating"]:
+            highest_rating = book
+    return highest_rating
 
 books = [                  
     {"Title": "Tomorrow, and Tomorrow, and Tomorrow",
@@ -154,12 +158,17 @@ books = [
         "Rating": 4.40
     }
 ]
-print(highest_rated(books))
+# print(highest_rated(books))
+
+
 #! Problem 8: Index Value Map 
 def index_to_value_map(lst):
-    pass
+    result = {}
+    for i in range(len(lst)):
+        result[i] = lst[i]
+    return result
 
 lst = ["apple","banana","cherry"]
 
-# print(index_to_value_map(lst))
+print(index_to_value_map(lst))
 
