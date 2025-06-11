@@ -1,18 +1,18 @@
-# Problem 1:Print List
+#! Problem 1:Print List
 def print_list(lst):
     for ele in lst:
         print(ele)
 
 print_list(["pika", "char", "lucario"])
 
-# Problem 2:Print Doubled List
+#! Problem 2:Print Doubled List
 
 
 def doubled(lst):
     for ele in lst:
         print(ele * 2)
 # doubled([1,2,3])
-# Problem 3:Return Doubled List
+#! Problem 3:Return Doubled List
 
 
 def doubled2(lst):
@@ -23,7 +23,7 @@ def doubled2(lst):
 
 print(doubled2([1, 2, 3]))
 
-# Problem 4:Flip Signs
+#! Problem 4:Flip Signs
 
 
 def flip_sign(lst):
@@ -32,7 +32,7 @@ def flip_sign(lst):
     return (lst)
 
 
-# Problem 5:Max Difference
+#! Problem 5:Max Difference
 def max_difference(lst):
     return max(lst) - min(lst)
 
@@ -51,7 +51,7 @@ def max_difference2(lst):
 test_list = [11, 2, 3, 4]
 print(max_difference2(test_list))
 
-# Problem 6:Below Threshold
+#! Problem 6:Below Threshold
 def count_less_than(numbers,threshold):
     less_counter = 0
     for ele in numbers:
@@ -63,7 +63,7 @@ numbers = [12,8,2,4,4,10]
 counter = count_less_than(numbers,5)
 print(counter)
 print("\n\n\n")
-# Problem 7:Evens List
+#! Problem 7:Evens List
 def get_evens(lst):
     result = []
     for ele in lst:
@@ -73,13 +73,13 @@ def get_evens(lst):
 lst = [1,2,3,4]
 evens_lst = get_evens(lst)
 print(evens_lst)
-# Problem 8: Multiples of Five
+#! Problem 8: Multiples of Five
 def multiples_of_five():
     for ele in range(1,101):
         if ele % 5 == 0:
             print(ele)
 # multiples_of_five()
-# Problem 9: Divisors
+#! Problem 9: Divisors
 def find_divisors(n):
     result = []
     for ele in range(1,n+1):
@@ -88,7 +88,7 @@ def find_divisors(n):
     return result
 lst = find_divisors(6)
 print(lst)
-# Problem 10: FizzBuzz
+#! Problem 10: FizzBuzz
 def fizzbuzz(n):
     for i in range(1,n+1):
         result = ""
@@ -103,13 +103,13 @@ def fizzbuzz(n):
 fizzbuzz(45)
 
 
-# Problem 11: Print the Index
+#! Problem 11: Print the Index
 def print_indices(lst):
     for i in range(len(lst)):
         print(i)
 print_indices(test_list)
 print("\n\n\n\n\n")
-# Problem 12: Linear Search
+#! Problem 12: Linear Search
 def linear_search(lst,target):
     for idx,ele in enumerate(lst):
         if ele == target:

@@ -1,41 +1,41 @@
-# Problem 1:Hello World!
+#! Problem 1:Hello World!
 def print_function(input):
     print(input)
 
 print_function("Hello World")
 
-# Problem 2: Today's Mood
+#! Problem 2: Today's Mood
 def todays_mood():
     mood = " Feeling like a boss"
     print("Today's mood:" + mood)
 
 todays_mood()
 
-# Problem 3 Lunch Menu
+#! Problem 3 Lunch Menu
 def print_menu(menu):
     print("Lunch today is: " + menu)
 
 print("Salad")
 
-# Problem 4: Sum of Two Integers
+#! Problem 4: Sum of Two Integers
 def sum_double(a, b):
     return 2 * (a + b)
 
 print(sum_double(5, 2))
 
-# Problem 5: Product of Two Integers
+#! Problem 5: Product of Two Integers
 def product(a, b):
     return a * b
 
 print(product(5, 234))
 
-# Problem 6: Classify Age
+#! Problem 6: Classify Age
 def classify_age(age):
     print("child" if age < 18 else "adult")
 
 classify_age(13)
 
-# Problem 7: What time is it?
+#! Problem 7: What time is it?
 def what_time_is_it(hour):
     result = ""
     if hour == 2:
@@ -48,7 +48,7 @@ def what_time_is_it(hour):
 
 what_time_is_it(12)
 
-# Problem 8: Blackjack
+#! Problem 8: Blackjack
 def black_jack(score):
     result = ""
     if score < 17:
@@ -63,20 +63,20 @@ def black_jack(score):
 
 black_jack(23)
 
-# Problem 9: First Item
+#! Problem 9: First Item
 def get_first(lst):
     return (lst[0])
 
 input = [1, 2, 3, 4, 5]
 print(get_first(input))
 
-# Problem 10: Last Item
+#! Problem 10: Last Item
 def get_last(lst):
     return (lst[-1])
 
 print(get_last(input))
 
-# problem 11: Counter
+#! problem 11: Counter
 def counter(stop):
     for i in range(1, stop + 1):
         print(i)
@@ -84,7 +84,7 @@ counter(7)
 
 print("Test")
 
-#Problem 12:Sum of 1 to 10
+#! Problem 12:Sum of 1 to 10
 def sum_ten():
     num = 0
     for i in range(1,11):
@@ -93,7 +93,7 @@ def sum_ten():
     
 sum_ten()
 
-#Problem 13:Total Sum
+#! Problem 13:Total Sum
 def sum_postive_numbers(input):
     num = 0
     for i in range(1,input + 1):
@@ -102,7 +102,7 @@ def sum_postive_numbers(input):
     
 sum_postive_numbers(6)
 
-#Problem 14:Total Sum in range
+#! Problem 14:Total Sum in range
 def sum_range(start,stop):
     num = 0
     for i in range(start,stop+1):
@@ -112,7 +112,7 @@ def sum_range(start,stop):
 print("\n")
 sum_range(3,9)
 
-#Problem 15:Negative Numbers
+#! Problem 15:Negative Numbers
 def print_negatives(lst):
     counter = []
     for i in lst:
