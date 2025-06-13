@@ -30,7 +30,29 @@ def group_anagrams2(words):
     return list(anagrams.values())
 words = ["eat","tea","tan","ate","nat","bat"]
 
+# print(group_anagrams2(words))
 
+'''
+init result 
+iterate thru list
+    if item key not in result
+        add it to result 
+    loop thru items in tuple starting at idx 1
 
-print(group_anagrams2(words))
+return result 
+'''
+def count_by_category(items):
+    result = {}    
+    for item in items:
+        for item_count in item:
+            if item_count == item[0]:
+                if item_count not in result:
+                    result[item_count] = 0
+            else:
+                result[item[0]] += 1
+    return result
 
+items = [("fruits", "apple"), ("vegetables", "carrot"), ("fruits", "banana")]
+
+for cat, val in items:
+    print(cat,val)

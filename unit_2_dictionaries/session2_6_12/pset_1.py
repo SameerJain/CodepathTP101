@@ -32,9 +32,11 @@ def get_highest_priority_task(tasks):
 #! Problem 4: Frequency Count
 def count_occurrences(nums):
     pass
+
 #! Problem 5: Find Majority Element
 def find_majority_element(elements):
     pass
+
 #! Problem 6: Has Duplicates
 def hasDuplicates(nums,k):
     pass
