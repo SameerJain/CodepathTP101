@@ -166,6 +166,8 @@ def divideList(nums: list[int]) -> bool:
 
 nums = [3,2,3,2,2,2]
 num2 = [1,2,3,4]
+"""
 
+"""
 print(divideList(nums))
 print(divideList(num2))

@@ -17,3 +17,4 @@ Ctrl + Alt + ↑ / ↓	 Add cursor above/below
 
 git add --all; git commit -m "new changes"; git push
 
+git acp "new changes"
