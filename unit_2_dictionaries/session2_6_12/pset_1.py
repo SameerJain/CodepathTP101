@@ -108,21 +108,64 @@ iterate thru the list
     or you can do if its greater than n/2, return the key its the same thing
 return None 
 """
-def find_majority_element(elements):
-    pass
 
-print(is(7/2))
+
+def find_majority_element(elements):
+    result = {}
+
+    for ele in elements:
+        result[ele] = result.get(ele,0) + 1
+        if result[ele] > len(elements) / 2:
+            return ele
+    return None
 
 elements = [2,2,1,1,1,2,2]
-print(find_majority_element(elements))
+# print(find_majority_element(elements))
+
 #! Problem 6: Has Duplicates
 
+"""
+create frequency dict 
+iterate thru list only for specified amount using range(0,k-1)
+if the key's value is greater than 1, return True
+return false at end
+"""
 
 def hasDuplicates(nums_array, k):
-    pass
+    freqs = {}
+    for i in range(0,k):
+        val = nums_array[i]
+        freqs[val] = freqs.get(val,0) + 1
+        if freqs[val] > 1:
+            return True
+    return False
+
+nums = [5, 6, 8, 2, 6, 4, 9]
+check1 = hasDuplicates(nums, 3)
+# print(check1)
+check2 = hasDuplicates(nums, 5)
+# print(check2)
 
 #! Problem 7: Make Pairs
 
+"""
+iterate thru and get frequency of numbers in dict
+iterate thru values and if any of them are odd, we return false
+"""
+def divideList(nums: list[int]) -> bool:
+    freqs = {}
+    
+    for num in nums:
+        freqs[num] = freqs.get(num,0) + 1
 
-def divideList(nums_array):
-    pass
+    for value in freqs.values():
+        if value % 2 == 1:
+            return False
+    
+    return True
+
+nums = [3,2,3,2,2,2]
+num2 = [1,2,3,4]
+
+print(divideList(nums))
+print(divideList(num2))
