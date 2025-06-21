@@ -14,3 +14,6 @@ Ctrl + Backspace	 Delete word left
 Ctrl + Del	         Delete word right
 Alt + Click	         Add multiple cursors
 Ctrl + Alt + ↑ / ↓	 Add cursor above/below
+
+git add --all; git commit -m "new changes"; git push
+
