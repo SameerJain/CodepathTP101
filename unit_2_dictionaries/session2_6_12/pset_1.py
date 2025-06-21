@@ -57,17 +57,17 @@ def get_highest_priority_task(tasks):
 
     return highest_task
 
-tasks = {"task1": 8, "task2": 10, "task3": 9, "task4": 10, "task5": 7}
-perform_task = (get_highest_priority_task(tasks))
-print(perform_task)
+# tasks = {"task1": 8, "task2": 10, "task3": 9, "task4": 10, "task5": 7}
+# perform_task = (get_highest_priority_task(tasks))
+# print(perform_task)
 
-perform_task = (get_highest_priority_task(tasks))
-print(perform_task)
+# perform_task = (get_highest_priority_task(tasks))
+# print(perform_task)
 
-perform_task = (get_highest_priority_task(tasks))
-print(perform_task)
+# perform_task = (get_highest_priority_task(tasks))
+# print(perform_task)
 
-print(tasks)
+# print(tasks)
 
 #! Problem 4: Frequency Count
 
@@ -77,27 +77,52 @@ iterate thru keys
 insert freqs using .get
 return result
 '''
-def count_occurrences(nums):
+def count_occurrences(nums_array):
+    result = {}
+    for idx, ele in enumerate(nums_array):
+        result[ele] = result.get(ele,0) + 1
+    
+    return result
 
+def count_occurrences3(nums_array):
+    result = {}
+    for num in nums_array:
+        if num in result:
+            result[num] += 1
+        else:
+            result[num] = 1
 
+    return result
 
+nums_array = [1, 2, 2, 3, 3, 3, 4]
 
+# print(count_occurrences3(nums_array))
 
 
 #! Problem 5: Find Majority Element
-
-
+"""
+get the size of array 
+iterate thru the list 
+    count the frequency of each number
+    if the frequency is equal to ceiling of n/2, return the key
+    or you can do if its greater than n/2, return the key its the same thing
+return None 
+"""
 def find_majority_element(elements):
     pass
 
+print(is(7/2))
+
+elements = [2,2,1,1,1,2,2]
+print(find_majority_element(elements))
 #! Problem 6: Has Duplicates
 
 
-def hasDuplicates(nums, k):
+def hasDuplicates(nums_array, k):
     pass
 
 #! Problem 7: Make Pairs
 
 
-def divideList(nums):
+def divideList(nums_array):
     pass

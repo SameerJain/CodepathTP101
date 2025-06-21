@@ -1,3 +1,16 @@
 all the different ways to iterate thru dictionaries
 all the different ways to access dictionaries
 unit 2 session 2 problem set 3 question 1 mountain peak
+
+🧠 ESSENTIAL EDITING
+Shortcut	Action
+Ctrl + D	         Select next match
+Ctrl + Shift + L	 Select all matches
+Alt + ↑ / ↓	         Move line/selection up or down
+Shift + Alt + ↓ / ↑	 Copy line/selection below/above
+Ctrl + /	         Toggle comment
+Ctrl + Shift + A	 Block comment (in some languages)
+Ctrl + Backspace	 Delete word left
+Ctrl + Del	         Delete word right
+Alt + Click	         Add multiple cursors
+Ctrl + Alt + ↑ / ↓	 Add cursor above/below
