@@ -128,27 +128,77 @@ create a found dict
 create a min_index
 iterate thru the list
     if the num isnt in the dict, add it, add the value as the key
-    if it has been found
-        if it he idx is less than the min index we swap 
+    if it has been found before
+        if its the first duplicate number found 
+            we set min_index from none to the the first duplicates idx from the beginning 
+        else if theres already a found index
+            if the first nums idx is less than the min index
+                we swap out min_index for the new one 
 """
-def find_min_index_of_repeating(nums: list[int]) -> int | None:
-    found_nums = {}
-    min_index = None
-    for idx, ele in enumerate(nums):
-        if ele not in found_nums:
-            found_nums[ele] = idx
-        el:
-            return found_nums[ele]
-    
-    return min_index
+# def find_min_index_of_repeating(nums: list[int]) -> int | None:
+#     found_nums = {}
+#     min_index = None
+#     print(f"Input list: {nums}")
+#     for idx, ele in enumerate(nums):
+#         if ele not in found_nums:
+#             found_nums[ele] = idx
+#             print(f"New element added: {ele}, idx: {idx}, found_nums[ele]: {found_nums[ele]}")
+#         else:
+#             if min_index == None:
+#                 min_index = found_nums[ele]
+#                 print(f"Setting min_index to {found_nums[ele]}.idx: {idx}, found_nums[ele]: {found_nums[ele]}")
 
-nums = [5, 6, 3, 4, 3, 6, 4]
-nums2 = [5, 6, 3, 4]
-nums3 = [ 5, 6, 2, 4, 3, 4, 3]
-print(find_min_index_of_repeating(nums))
-print(find_min_index_of_repeating(nums2))
-print(find_min_index_of_repeating(nums3))
+#             elif found_nums[ele] < min_index: 
+#                 print(f"Setting new min_index. ele: {ele}, idx: {idx} found_nums[ele]: {found_nums[ele]}. Current min_index: {min_index}")
+#                 min_index = found_nums[ele]
+#                 print(f"new min_index: {min_index}")
+#     print("Final min_index:")
+#     return min_index
+
+# nums = [5, 6, 3, 4, 3, 6, 4]
+# nums2 = [5, 6, 3, 4]
+# nums3 = [ 5, 6, 2, 4, 3, 4, 3]
+# print(find_min_index_of_repeating(nums))
+# print(find_min_index_of_repeating(nums2))
+# print(find_min_index_of_repeating(nums3))
 
 #! Problem 7: Target Sum 
-def two_sum(nums,target):
+"""
+create a compliment dictionary
+iterate thru nums 
+    comp = target nums[i]
+    if comp in dict
+        return idx of the comp its tied to, and current number
+    store comp in dict tied to idx
+"""
+def two_s2um(nums: list[int],target: int) -> tuple[int,int] | None:
+    compliments = {}
+    for i in range(len(nums)):
+        comp = target - nums[i]
+        if nums[i] in compliments.keys():
+            return [compliments[nums[i]],i]
+        compliments[comp] = i
+    return None
+
+def two_sum(nums: list[int], target):
+    compliments = {}
+    for i in range(len(nums)):
+        diff = target - nums[i]
+        if diff in compliments:
+            return [compliments[diff],i]
+        compliments[nums[i]] = i
+    # print(nums, target,compliments)
     
+
+
+nums = [2,7,11,15]
+q_1 = two_sum(nums,9)
+q_2 = two_sum(nums,18)
+
+nums2 = [3,3]
+q_3 = two_sum(nums2,6)
+
+print(q_1)
+print(q_2)
+print(q_3)
+
