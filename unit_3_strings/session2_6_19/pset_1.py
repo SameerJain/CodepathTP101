@@ -1,4 +1,4 @@
-#This is a comment
+
 #! Problem 1: Sum of Strings 
 def sum_of_number_strings(nums):
     pass
@@ -38,11 +38,11 @@ def longest_uniform_substring(s):
 
 s1 = "aaaaaaaaaaaaaaaaabbbbCdAA"
 l1 = longest_uniform_substring(s1)
-print(l1)
+# print(l1)
 
 s2 = "abcdef"
 l2 = longest_uniform_substring(s2)
-print(l2)
+# print(l2)
 
 #! Problem 5: Teemo's Attack 
 def find_poisoned_duration(time_series,duration):
