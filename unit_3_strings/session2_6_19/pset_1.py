@@ -1,7 +1,16 @@
 #This is a comment
 #! Problem 1: Sum of Strings 
-#! Problem 2: Remove Duplicates 
+def sum_of_number_strings(nums):
+    pass
+
+#! Problem 2: Remove Duplicates
+def remove_duplicated(nums):
+    pass
+
 #! Problem 3: Reverse Letters
+def reverse_only_letters(s):
+    pass
+
 #! Problem 4: Longest Uniform Substring 
 
 '''
@@ -34,6 +43,12 @@ print(l1)
 s2 = "abcdef"
 l2 = longest_uniform_substring(s2)
 print(l2)
+
 #! Problem 5: Teemo's Attack 
+def find_poisoned_duration(time_series,duration):
+    pass
+
 #! Problem 6: Sum Unique Elements 
+def sum_of_unique_elements(lst1,lst2):
+    pass
 

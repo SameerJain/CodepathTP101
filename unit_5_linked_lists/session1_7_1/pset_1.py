@@ -1,4 +1,9 @@
 #! Problem 1: Pokemon Class 
+class Pokemon:
+    def __init__(self, name, types):
+        self.name = name
+        self.types = types
+        self.is_caught = False
 #! Problem 2: Create Squirtle 
 #! Problem 3: Is Caught
 #! Problem 4: Catch Pokemon
