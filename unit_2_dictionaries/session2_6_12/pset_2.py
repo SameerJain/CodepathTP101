@@ -182,16 +182,46 @@ nums = [6,1,2,2,3]
 
 #! Problem 7: Good Pairs 
 """
-count the frequency of each number
-
-get the ceiling amount of each 
+iterate thru list 
+    if two numbers are the same, ad the 2 indexes as a tuple to key if not already added
 """
-def numIdenticalPairs(nums):
+# def numIdenticalPairs(nums):
+#     result = {}
+#     for i in range(len(nums)):
+#         for j in range(len(nums)):
+#             if i == j:
+#                 continue
+#             elif nums[i] == nums[j]:
+#                 if nums[i] not in result:
+#                     result[nums[i]] = []
+#                 pair = min(i,j), max(i,j)
+#                 result[nums[i]].append(pair)
+#     print(len(result.values()))
+#     print(result.values())
+
+# def numIdenticalPairs3(nums: list[int]) -> dict[int,tuple]:
+#     result = {}
+
+#     for i in range(len(nums)):
+#         for j in range(i+1,len(nums)):
+#             if nums[i] == nums[j]
+
+# def numIdenticalPairs2(nums: list[int]) -> dict[int,tuple]:
+#     freqs = {}
+
+#     for num in nums:
+#         freqs[num] = freqs.get(num,0) + 1
+    
+#     good_pairs = 0
+#     for value in freqs.values():
+#         good_pairs += (count * (count - 1)) // 2
+    
+#     return good_pairs
+
+def numIdenticalPairs4(nums_array: list[int]) -> dict[int]:
     pass
 
-testlist = ()
-lst = [2,1]
-lst2 = [2,1]
-testlist.append(lst)
-print((testlist))
+nums_array = [1,2,3,1,1,3]
+print(numIdenticalPairs(nums_array))
+
 

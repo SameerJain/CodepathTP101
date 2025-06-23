@@ -119,7 +119,6 @@ create another dict for amount per genre using the same key
 insert movie ratings and amount based off genre
 use max_val iterator to find highest average, keeping track of key 
 find whichever value for final average is highest 
-
 '''
 
 
