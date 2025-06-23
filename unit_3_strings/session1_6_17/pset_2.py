@@ -41,11 +41,11 @@ my_str2 = "aAaAaAaAAA"
 my_str3 = "ths strng s mssng vwls"
 
 count1 = vowel_count(my_str)
-# print(count1)
+print(count1)
 count2 = vowel_count(my_str2)
-# print(count2)
+print(count2)
 count3 = vowel_count(my_str3)
-# print(count3)
+print(count3)
 
 #! Problem 4: Reverse Sentence 
 def reverse_sentence(sentence: str) -> str:

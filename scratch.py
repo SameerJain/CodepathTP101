@@ -1,31 +1,4 @@
 
-#! Problem 1: Choose your Pokemon 
-def choose_pokemon(my_pokemon):
-    for pokemon in my_pokemon:
-        print(f"{pokemon} I choose you!")
-
-my_pokemon = ["Pikachu","Charizard","Eevee"]
-# choose_pokemon(my_pokemon)
-
-#! Problem 2: Rotate Left 
-"""
-create new string with size n from left
-remove from left
-append to right using string
-"""
-
-def rotate_left0(s,n):
-    left_chunk = s[:n]
-    new_str = s.replace(left_chunk,"",1)
-    new_str += left_chunk
-    return new_str
-
-def rotate_left(s,n):
-    return s[n:] + s[:n]
-
-s = "rotation"
-# print(rotate_left(s, 2))
-
 #! Problem 3: First Duplicate 
 #? I dont understand why the expected output is 3,5 None
 """
@@ -37,7 +10,7 @@ iterate thru string
 
 ret none at end of loop
 """
-def first_repeated_char(s: str) -> int | None:
+def first_repeated_char0(s: str) -> int | None:
     idx_map = {}
     first_idx = float('inf')
 
@@ -50,7 +23,7 @@ def first_repeated_char(s: str) -> int | None:
 
     return first_idx if first_idx != float('inf') else None
 
-def first_repeated_char0(s):
+def first_repeated_char(s):
     seen_map = {}
     for i in range(len(s)):
         char = s[i]
@@ -63,31 +36,10 @@ s = "hello world"
 s2 = "aAbBCC"
 s3 = "abcdefg"
 
-# print(first_repeated_char(s))
-# print(first_repeated_char(s2))
-# print(first_repeated_char(s3))
+print(first_repeated_char(s))
+print(first_repeated_char(s2))
+print(first_repeated_char(s3))
 
-
-#! Problem 4: Find the Imposter 
-
-"""
-iterate thru 
-    if the letter is not in s1 return it 
-
-freq count both strings using hashmap
-iterate thru keys of 2
-if its not in s1 return it
-"""
-
-def find_difference(s1,s2):
-    for char in s2:
-        if char not in s1:
-            return char
-    return None
-
-s1 = "abcd"
-s2 = "baedc"
-# print(find_difference(s1, s2))
 
 #! Problem 5: Longest Substring
 """
@@ -158,61 +110,37 @@ def length_of_longest_substring0(s):
 
     return maxLength
 
-# s = "abcdeefghhhhh"
-# count = length_of_longest_substring(s)
-# print(count)
+s = "abcdeefghhhhh"
+count = length_of_longest_substring(s)
+print(count)
 
 # s2 = "aaaaaaaaaaaaaaa"
 # count = length_of_longest_substring(s2)
 # print(count)
 
+#! Problem 5: No duplicates Allowed
+# def remove_duplicates_from_front(nums):
+#     frequency_map = {}
+#     for num in nums:
+#         frequency_map[num] = True
+#     last_occurrences = []
+#     for num in nums[::-1]:  # Reverse iterate
+#         if frequency_map[num]:
+#             last_occurrences.append(num)
+#             frequency_map[num] = False
+#     return last_occurrences[::-1]  # Reverse again to original order
 
-#! Problem 6: Roman to Integer 
-"""
-OLD:create hashmap for symbols
-    use if statements for special cases
-    store special cases separately
-"""
+# def remove_duplicates_from_front1(nums):
+#     frequency_map = {}
+#     for num in nums:
+#         frequency_map[num] = True
+#     last_occurrences = []
+#     for num in nums:  # Reverse iterate
+#         if frequency_map[num]:
+#             last_occurrences.append(num)
+#             frequency_map[num] = False
+#     return last_occurrences  # Reverse again to original order
+# nums = [6,5,3,5,2,8,3]
 
-"""
-Iterate from right to left:
-    if the value to the left is less
-        subract and move down
-"""
-
-"""
-iterate from left to right
-    if the value on the right is less
-        subtract and move down
-"""
-
-def roman_to_int(s):
-    value_map = {
-        "I": 1,
-        "V": 5,
-        "X": 10,
-        "L":50,
-        "C":100,
-        "D":500,
-        "M":1000,
-    }
-
-    final_sum = 0
-    i = len(s) - 1
-    while i >= 0:
-        final_sum += value_map[s[i]]
-        if i != 0 and value_map[s[i-1]] < value_map[s[i]]:
-            final_sum -= value_map[s[i-1]]
-            i -= 1
-        i -= 1
-    return final_sum
-
-
-s = "XL"
-print(roman_to_int(s))
-
-s2 = "LVIII"
-print(roman_to_int(s2))
-
-s3 = "MCMXCIV"
-print(roman_to_int(s3))
+# print(remove_duplicates_from_front(nums))
+# print(remove_duplicates_from_front1(nums))
