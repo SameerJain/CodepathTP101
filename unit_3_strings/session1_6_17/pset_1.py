@@ -117,8 +117,35 @@ def min_distance0(words, word1, word2):
             return counter 
     return None
 
+"""
+set lists for word 1 and word 2
+iterate thru words
+    if word is word 1
+        append index
+        if word 1 has been found already
+        get the distance using abs()
+        set min distance to new min
+    do same for word 2 
+return None
+
+"""
 def min_distance(words,word1,word2):
+    word1_idxs = []
+    word2_idxs = []
+    min_dist = float('inf')
+    for idx, word in enumerate(words):
+        if word == word1:
+            word1_idxs.append(idx)
+            if word2_idxs:
+                dist = abs(word1_idxs[-1] - word2_idxs[-1])
+                min_dist = min(min_dist,dist)
+        if word == word2:
+            word2_idxs.append(idx)
+            if word1_idxs:
+                dist = abs(word2_idxs[-1] - word1_idxs[-1])
+                min_dist = min(min_dist,dist)
     
+    return min_dist if min_dist != float('inf') else None
 
 words = ["the", "quick", "brown", "fox", "jumped", "the"]
 dist1 = min_distance(words, "quick", "jumped")
