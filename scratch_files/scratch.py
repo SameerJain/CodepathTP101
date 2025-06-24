@@ -1,15 +1,15 @@
 
-#! Problem 3: First Duplicate 
-#? I dont understand why the expected output is 3,5 None
+#! 3.2.2 Problem 3: First Duplicate 
+
 """
 create a hashmap with key as letter and values as first appearance
 iterate thru string
     if its in the map, we set first_rep_idx to the value
     if theres another one, we check which one is lower and swap
     if its not in the map we add it
-
 ret none at end of loop
 """
+#* MY SOLUTION 
 def first_repeated_char0(s: str) -> int | None:
     idx_map = {}
     first_idx = float('inf')
@@ -23,13 +23,13 @@ def first_repeated_char0(s: str) -> int | None:
 
     return first_idx if first_idx != float('inf') else None
 
+#* ANSWER KEY
 def first_repeated_char(s):
-    seen_map = {}
-    for i in range(len(s)):
-        char = s[i]
-        if char in seen_map:
-            return i
-        seen_map[char] = i
+    seen_chars = []
+    for index, char in enumerate(s):
+        if char in seen_chars:
+            return index
+        seen_chars.append(char)
     return None
 
 s = "hello world"
@@ -41,7 +41,7 @@ print(first_repeated_char(s2))
 print(first_repeated_char(s3))
 
 
-#! Problem 5: Longest Substring
+#! 3.2.2 Problem 5: Longest Substring
 """
 init len of substring
 iterate thru list
@@ -110,37 +110,26 @@ def length_of_longest_substring0(s):
 
     return maxLength
 
+#* ANSWER KEY - original
+def length_of_longest_substring(s):
+    start = maxLength = 0
+    usedChar = {}
+    
+    for i, char in enumerate(s):
+        if char in usedChar and start <= usedChar[char]:
+            start = usedChar[char] + 1
+        else:
+            maxLength = max(maxLength, i - start + 1)
+        usedChar[char] = i
+    
+    return maxLength
+
+#* Tests
 s = "abcdeefghhhhh"
 count = length_of_longest_substring(s)
 print(count)
 
-# s2 = "aaaaaaaaaaaaaaa"
-# count = length_of_longest_substring(s2)
-# print(count)
+s2 = "aaaaaaaaaaaaaaa"
+count = length_of_longest_substring(s2)
+print(count)
 
-#! Problem 5: No duplicates Allowed
-# def remove_duplicates_from_front(nums):
-#     frequency_map = {}
-#     for num in nums:
-#         frequency_map[num] = True
-#     last_occurrences = []
-#     for num in nums[::-1]:  # Reverse iterate
-#         if frequency_map[num]:
-#             last_occurrences.append(num)
-#             frequency_map[num] = False
-#     return last_occurrences[::-1]  # Reverse again to original order
-
-# def remove_duplicates_from_front1(nums):
-#     frequency_map = {}
-#     for num in nums:
-#         frequency_map[num] = True
-#     last_occurrences = []
-#     for num in nums:  # Reverse iterate
-#         if frequency_map[num]:
-#             last_occurrences.append(num)
-#             frequency_map[num] = False
-#     return last_occurrences  # Reverse again to original order
-# nums = [6,5,3,5,2,8,3]
-
-# print(remove_duplicates_from_front(nums))
-# print(remove_duplicates_from_front1(nums))
