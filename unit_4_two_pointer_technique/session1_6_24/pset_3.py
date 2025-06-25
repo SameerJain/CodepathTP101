@@ -4,6 +4,9 @@ def find_highest_exponent(base,limit):
     pass
 
 #! Problem 2: 2-Pointer Target Sum 
+"""
+start with nested loop and brute force search
+"""
 def two_sum(nums,target):
     pass
 

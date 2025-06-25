@@ -1,5 +1,5 @@
 
-#! Problem 1: Sum of Strings 
+#! (DONE) Problem 1: Sum of Strings 
 """
 sum variable
 loop thru type casting and add up
@@ -14,7 +14,7 @@ def sum_of_number_strings(nums):
 # sum = sum_of_number_strings(nums)
 # print(sum)
 
-#! Problem 2: Remove Duplicates
+#! (DONE) Problem 2: Remove Duplicates
 def remove_duplicates1(nums):
     if not nums:
         return 0
@@ -53,7 +53,7 @@ def remove_dupes(items):
 nums = [1,1,1,2,3,4,4,5,6,6]
 # print(remove_dupes(nums))
 
-#! Problem 3: Reverse Letters
+#! (DONE) Problem 3: Reverse Letters
 """
 iterate thru string and put all letters chars in list
 
@@ -82,7 +82,7 @@ reversed_s = reverse_only_letters(s)
 # print(reversed_s)
 
 
-#! Problem 4: Longest Uniform Substring 
+#! (DONE) Problem 4: Longest Uniform Substring 
 
 '''
 iterate thru all of it 
@@ -115,7 +115,7 @@ s2 = "abcdef"
 l2 = longest_uniform_substring(s2)
 # print(l2)
 
-#! Problem 5: Teemo's Attack 
+#! (DONE) Problem 5: Teemo's Attack 
 """
 iterate thru time series
     if the frame is an attack frame
@@ -168,7 +168,7 @@ iterate thru list 1
     add it to the sum variable
 return sum variable 
 """
-#! Problem 6: Sum Unique Elements 
+#! (DONE) Problem 6: Sum Unique Elements 
 def sum_of_unique_elements(lst1,lst2):
     freqs = {}
     final_sum = 0
