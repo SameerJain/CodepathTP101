@@ -14,6 +14,7 @@ def sum_of_number_strings(nums):
 # sum = sum_of_number_strings(nums)
 # print(sum)
 
+#? Supposed to return the list not the idx 
 #! (DONE) Problem 2: Remove Duplicates
 def remove_duplicates1(nums):
     if not nums:

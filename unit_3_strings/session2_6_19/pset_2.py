@@ -181,7 +181,6 @@ get the length of both
 set i to be the length of the larger string
 iterate
 """ 
-
 def interleave_lists(lst1,lst2):
     
     bigger_list = max(len(lst1),len(lst2))

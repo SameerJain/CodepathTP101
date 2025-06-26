@@ -1,3 +1,8 @@
-unit 3 session 1 pset 3 problem 3(First Duplicate), why is it + 1 more than what it should be
+unit 3  session 2 problem set 1 problem 2 remove duplicates
+    question statement is saying return the list but key says return idx 
 
-unit 3 session 1 pset 3 problem 5(Longest Substring): why does it output 1 and can it repeat
+unit 3 session 2 problem set 3 problem 3 word follows pattern:
+    its missing edge cases
+
+unit 3 session 2 problem set 3 problem 6 flowerbed:
+    the answer key has some incorrect test cases
