@@ -4,12 +4,12 @@ def find_highest_exponent(base,limit):
     pass
 
 #! Problem 2: 2-Pointer Target Sum 
-"""
-start with nested loop and brute force search
-"""
+
+#? We have to sort the list first but the problem statement is incorrect and gives an unsorted list 
 def two_sum(nums,target):
     pass
 
+#? This is also wrong given the problem statement 
 #! Problem 3: Evaluate Two SUm 
 def two_sum_p3(nums,target):
     pass

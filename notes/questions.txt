@@ -6,3 +6,7 @@ unit 3 session 2 problem set 3 problem 3 word follows pattern:
 
 unit 3 session 2 problem set 3 problem 6 flowerbed:
     the answer key has some incorrect test cases
+
+unit 4 session 1 problem set 3 two sum:
+    the problem statement doesnt assume a sorted list 
+
