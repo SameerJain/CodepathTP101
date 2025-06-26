@@ -213,7 +213,7 @@ iterate thru the list
 
 return count >= n
 """ 
-def can_place_flowers(flowerbed,n):
+def can_place_flowers0(flowerbed,n):
     count = 0
     can_place_before = False
     can_place_after = False
@@ -236,7 +236,23 @@ def can_place_flowers(flowerbed,n):
         # print(flowerbed)
     return count >= n
 
+def can_place_flowers(flowerbed,n):
+    count = 0
+
+    for i in range(len(flowerbed)):
+        if flowerbed[i] == 0:
+            can_place_before = (i == 0) or (flowerbed[i-1] == 0)
+            can_place_after = (i == len(flowerbed)-1)  or (flowerbed[i+1] == 0)
+
+            if can_place_after and can_place_before:
+                flowerbed[i] = 1
+                count += 1
+                if count >= n: 
+                    return True   
+    return count >= n
+
 flowerbed = [1,0,0,0,1]
+approved = can_place_flowers(flowerbed, 1)
 approved2 = can_place_flowers(flowerbed, 2)
-print(approved2)     
-approved1 = can_place_flowers(flowerbed, 1)
+print(approved)
+print(approved2)
