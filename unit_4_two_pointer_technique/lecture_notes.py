@@ -18,21 +18,23 @@ Given a string s, determine if it can become a palindrome by removing at most on
 A palindrome is a word, phrase, or sequence that reads the same backward as forward.
 """
 
-def valid_palindrome(s):
-    left = 0
-    right = len(s) - 1
 
+
+def valid_palindrome(s):
+    if len(s) == 1:
+        return False
     while left < right:
         if s[left] != s[right]:
-            return False
+                new_str = new_str[:left] + new_str[left] 
+                valid_palindrome(new_str,left,right)
         left += 1
         right -= 1
     return True
 
 """
-Input: s = "abca"
+Input: s = "aba"
 Output: True
 """
-s = "acca"
-print(valid_palindrome(s))
+s = "abcdaa"
+print(valid_palindrome(s,0,len(s)- 1))
 

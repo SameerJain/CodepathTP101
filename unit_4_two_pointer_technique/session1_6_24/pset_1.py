@@ -51,6 +51,8 @@ lst = [1,2,3,4,5]
 
 #! (DONE) Problem 3: Evaluating Solutions
 
+#? Question doesnt assume sorted list 
+
 def reverse_list(lst):
     left = 0
     right = len(lst) - 1
