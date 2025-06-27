@@ -10,3 +10,8 @@ unit 3 session 2 problem set 3 problem 6 flowerbed:
 unit 4 session 1 problem set 3 two sum:
     the problem statement doesnt assume a sorted list 
 
+unit 4 session 1 problem set 1 problem 2:
+    We have to sort the list first but the problem statement is incorrect and gives an unsorted list
+
+unit 4 session 1 problem set  problem 4:
+    test case variables are messed up

@@ -1,3 +1,5 @@
+class Node:
+
 #! Problem 1: Detest Circular Linked List 
 #! Problem 2: Find Last Node in a Linked List Cycle 
 #! Problem 3: Partition List Around Value 
