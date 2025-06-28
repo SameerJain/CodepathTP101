@@ -1,3 +1,27 @@
+class TreeNode:
+    def __init__(self,value,left= None,right=None):
+
+    def equality(root):
+        pass
+
+    def left_path(root):
+        pass
+
+    def preorder_traversal(root):
+        pass
+
+    def is_lesser(root):
+        pass
+
+    def contains_greater(root,value):
+        pass
+
+    def contains_greater_bst(root,value):
+        pass
+
+    def sum_leaves(root):
+        pass
+
 #! Problem 1: Build a Binary Tree 3
 #! Problem 2: 3-Node Booleans
 #! Probem 3: 3-Node Equality 

@@ -1,3 +1,31 @@
+class TreeNode:
+    def __init__(self,value,left=None,right=None):
+        self.val = value
+        self.left = left
+        self.right = right
+    
+    def check_tree(root):
+        pass
+
+    def right_most(root):
+        pass
+
+    def right_most(root):
+        pass
+
+    def postorder_traversal(root):
+        pass
+
+    def product_tree(root):
+        pass
+
+    def is_leaf_bst(root,value):
+        pass
+
+    def is_full_tree(root):
+        pass
+
+    
 #! Problem 1: Build a Binary Tree 2
 #! Problem 2: 3-Node Product 1
 #! Problem 3: 3-Node Product 2

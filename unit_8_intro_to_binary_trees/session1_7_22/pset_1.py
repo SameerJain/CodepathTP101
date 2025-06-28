@@ -1,4 +1,36 @@
 
+class TreeNode():
+    def __init__(self,key,val=None,right=None):
+        self.val = val
+        self.left = left 
+        self.right = right
+
+    def check_tree(root):
+        pass
+
+    def check_tree1(root):
+        pass
+
+    def left_most(root):
+        pass
+    
+    def descending_leaves(root):
+        pass
+
+    def find_bst(root,value):
+        pass
+
+    def find(root,value):
+        pass
+
+    def size(root):
+        pass
+
+    def inorder_traversal(root):
+        pass
+
+    
+
 #! Problem 1: Build a Binary Tree 1
 
 #! Problem 2: 3-Node Sum 1

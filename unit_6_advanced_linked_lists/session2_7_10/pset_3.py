@@ -1,3 +1,26 @@
+class Node:
+    def __init__(self,value,next=None):
+        self.value = value
+        self.next = next
+    
+    def circular_list_length(head):
+        pass
+
+    def detect_and_remove_cycle(head):
+        pass
+
+    def merge_two_lists(head_a,head_a):
+        pass
+
+    def skip_and_remove(head,m,n):
+        pass
+
+    def rotate_doubly_linked_list(head,k):
+        pass
+
+    def merge_nodes(head):
+        pass
+    
 #! Problem 1: Circular Linked List Length 
 #! Problem 2: Detest and REmove Cycle in a Linked List 
 #! Problem 3: Merge Two Sorted Linked Lists 
