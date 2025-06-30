@@ -19,3 +19,5 @@ unit 4 session 1 problem set  problem 4:
 unit 5 session 1 problem set 2 problem 8 print hand:
     question statement wants the name given to the object but seems that in python thats not easily possible 
 
+unit 5 session 1 problem set 2 problem 10 middle node:
+    testcase should output tail.next and not have the .value

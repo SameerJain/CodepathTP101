@@ -135,15 +135,14 @@ card = Card("Hearts","Ace")
 # print(sum_val)
 
 #? how to print out the name that was given to an object like what it wants in the test case
+#! (DONE) Problem 8: Print Hand 
+# card_one = Card("Hearts","3")
+# card_two = Card("Hearts","4")
+# card_three = Card("Diamonds","King")
 
-#! Problem 8: Print Hand 
-card_one = Card("Hearts","3")
-card_two = Card("Hearts","4")
-card_three = Card("Diamonds","King")
-
-card_one.next = card_two
-card_two.next = card_three
-print_hand(card_one)
+# card_one.next = card_two
+# card_two.next = card_three
+# print_hand(card_one)
 
 
 class Node:
@@ -151,29 +150,72 @@ class Node:
         self.value = value
         self.next = next 
 
+    def __repr__(self):
+        return f"{self.value}"
+    
 def print_linked_list(head):
-    pass
+    result = []
+    curr = head
+    while curr:
+        print(f"currval: {curr.value}")
+        result.append(curr.value)
+        curr = curr.next
+    return result
 
 
-# #! Problem 9: Head and Tail Nodes 
-# print(head.value)
-# print(head.next)
-# print(tail.value)
-# print(tail.next)
 
-# #! Problem 10: Middle Node 
-# print(head.next.value)
-# print(middle.next.value)
-# print(tail.next.value)
 
-# #! Problem 11: Zodiac Signs 
-# print(node_1.value, "->", node_1.next.value)
-# print(node_2.value, "->", node_2.next.value)
-# print(node_3.value, "->", node_3.next.value)
-# print(node_4.value, "->", node_4.next)
+#! Problem 9: Head and Tail Nodes 
 
-# #! Problem 12: Print Linked List
-# # input linked list: a->b->c->d->e
-# print_linked_list(a)
+head = Node(100)
+tail = Node(200)
+head.next = tail
+
+
+print(head.value)
+print(head.next)
+print(tail.value)
+print(tail.next)
+
+#? testcase should output tail.next and not have the .value
+#! Problem 10: Middle Node
+
+middle = Node(150)
+
+head.next = middle
+middle.next = tail
+tail.next = None
+
+print(head.next.value)
+print(middle.next.value)
+print(tail.next)
+
+#! (DONE) Problem 11: Zodiac Signs
+
+node_1 = Node("aries")
+node_2 = Node("taurus")
+node_3 = Node("gemini")
+node_4 = Node("cancer")
+
+node_1.next = node_2
+node_2.next = node_3
+node_3.next = node_4
+
+
+print(node_1.value, "->", node_1.next.value)
+print(node_2.value, "->", node_2.next.value)
+print(node_3.value, "->", node_3.next.value)
+print(node_4.value, "->", node_4.next)
+
+#! (DONE) Problem 12: Print Linked List
+# input linked list: a->b->c->d->e
+
+node_1.value = "a"
+node_2.value = "b"
+node_3.value = "c"
+node_4.value = "d"
+node_5 = Node("e")
+node_4.next = node_5
+print(print_linked_list(node_1))
 
 
