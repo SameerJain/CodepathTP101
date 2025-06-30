@@ -88,6 +88,14 @@ print(player2_rank)
 player3_rank = get_place("Mario")
 print(player3_rank)
 
+
+class Node:
+    def __init__(self,value,next=None):
+        self.value = value
+        self.next = next
+    
+
+
 #! Problem 9: Tom and Jerry
 print(cat.value)
 print(cat.next)
