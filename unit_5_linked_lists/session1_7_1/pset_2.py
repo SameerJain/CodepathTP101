@@ -7,7 +7,7 @@ class Card():
         self.rank = rank
     
     def print_card(self):
-        print(f"{self.rank}")
+        print(f"{self.rank} of {self.suit}")
 
     def is_valid(self):
         pass
@@ -36,9 +36,29 @@ class Card():
 #! Problem 5: Get Value 
 #! Problem 6: Hand Class
 #! Problem 7: Sum of Cards
+
+sum = sum_hand(hand)
+print(sum)
+
 #! Problem 8: Print Hand 
+card_one = Card("Hearts","3")
+card_two = Card("Hearts","4")
+card_three = Card("Diamonds","King")
+
+card_one.next = card_two
+card_two.next = card_three
+print_hand(card_one)
+
 #! Problem 9: Head and Tail Nodes 
+print(head.value)
+print(head.next)
+print(tail.value)
+print(tail.next)
+
 #! Problem 10: Middle Node 
+print(head.next.value)
+print(middle.next.value)
+print(tail.next.value)
 
 #! Problem 11: Zodiac Signs 
 print(node_1.value, "->", node_1.next.value)

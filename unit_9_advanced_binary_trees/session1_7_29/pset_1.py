@@ -20,9 +20,9 @@ class TreeNode:
 
     def can_split(root):
         pass
-    
 
-#! Problem 1: Is Symmetric Tree
+
+#! done Problem 1: Is Symmetric Tree
 #! Problem 2: Root-to-Leaf Paths
 #! Problem 3: Minimum Difference in BST
 #! Problem 4: Increasing Order Search Tree
