@@ -115,6 +115,11 @@ print_list(new_list)
 
 #! Problem 4: Linked List Length 
 head = num1
+print(ll_length(head))
+head = None
+
+
+
 
 #! Problem 5: Delete Tail 
 #! Problem 6: Greatest Node 
