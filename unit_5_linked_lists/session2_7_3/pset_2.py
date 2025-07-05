@@ -17,29 +17,78 @@ def is_two_pair(player_hand):
             return True
     return False
 
-
-
-
-
 def find_middle_node(head):
-    pass
+    slow, fast = head, head
+
+    while fast and fast.next:
+        fast = fast.next.next 
+        if fast == None:
+            return slow
+        slow = slow.next
+
+    return slow
 
 def ll_pop(head,i):
-    pass
+    if not head:
+        return None
+
+    counter = 0
+    curr = head
+    if i == 0:
+        head = head.next
+        curr.next = None
+        return head
+    
+    while counter < i - 1:
+        curr = curr.next
+        counter += 1
+        if curr is None:
+            return head
+    curr.next = curr.next.next 
+    return head
+
 
 def find_max(head):
-    pass
+    curr = head
+    max_val = 0
+    while curr:
+        max_val = max(max_val,curr.value)
+        curr = curr.next
+    return max_val
 
-def delete(head):
-    pass
+
+def delete_tail(head):
+
+    if head is None:
+        return None
+    
+    if head.next is None:
+        head = None
+        return head
+    
+    curr = head
+
+    while curr.next.next:
+        curr = curr.next 
+    curr.next = None
+
+
+    return head
 
 def ll_length(head):
-    pass
+    curr = head
+    counter = 0
+    while curr:
+        counter += 1
+        curr = curr.next
+        
+    return counter
 
 class Node:
-	def __init__(self, value, next=None):
+	def __init__(self, value, next=None,prev = None):
 		self.value = value
 		self.next = next
+        # self.prev = prev
 
 def add_first(head,val):
     temp = Node(val)
@@ -48,6 +97,9 @@ def add_first(head,val):
     return temp
 
 def print_list(head):
+    if head is None:
+        return None
+
     curr = head
     while curr:
         print(f"{curr.value} -> ",end = "")
@@ -59,15 +111,20 @@ class SLLNode:
     def __init__(self,value,next = None):
         self.value = value
         self.next = next
+        
 
 class DLLNode:
-    def __init__(self,value,next = None,pre = None):
+    def __init__(self,value,next = None):
         self.value=value
         self.next=next
-        self.prev=prev
 
-    def dll_to_sll(dll_head):
-        pass
+
+def dll_to_sll(dll_head):
+    curr = dll_head
+    while curr:
+        curr.prev = None
+        curr = curr.next
+    return curr
 
 
 #! (DONE) Problem 1: Poker Two Pair Hand 
@@ -103,31 +160,102 @@ node_3.next = node_4
 
 #! (DONE) Problem 3: Insert Value First 
 
-node_a = Node("A")
-node_b = Node("B")
-node_c = Node("C")
-node_a.next = node_b
-node_b.next = node_c
-print_list(node_a)
-new_list = add_first(node_a,0)
-print_list(new_list)
+# node_a = Node("A")
+# node_b = Node("B")
+# node_c = Node("C")
+# node_a.next = node_b
+# node_b.next = node_c
+# print_list(node_a)
+# new_list = add_first(node_a,0)
+# print_list(new_list)
 
 
-#! Problem 4: Linked List Length 
-head = num1
-print(ll_length(head))
-head = None
+#! (DONE) Problem 4: Linked List Length 
+"""
+iterate thru list with counter variable
+Get to end of list
+return counter variable 
+"""
+
+num1 = Node(1)
+num2 = Node(2)
+num3 = Node(3)
+
+num1.next = num2
+num2.next = num3
+
+# head = num1
+# print(ll_length(head))
+
+# head = None
+# print(ll_length(head))
 
 
+#! (DONE) Problem 5: Delete Tail 
 
+# # original list of 3
+# print_list(num1)
 
+# # deleting 3 
+# delete_tail(num1)
+# print_list(num1)
 
+# # deleting 2
+# delete_tail(num1)
+# print_list(num1)
 
+# # deleting 1
+# delete_tail(num1)
+# print_list(num1)
 
-#! Problem 5: Delete Tail 
-#! Problem 6: Greatest Node 
-#! Problem 7: Pop Node 
-#! Problem 8: Find Middle Node 
-#! Problem 9: Create Double Links
-#! Problem 10: Double to Single 
+#! (DONE) Problem 6: Greatest Node 
+
+num4 = Node(10)
+num3.next = num4
+
+# max_val = find_max(num1)
+# print(max_val)
+
+#! (DONE) Problem 7: Pop Node 
+
+# print_list(num1)
+# num1 = ll_pop(num1,0)
+# print_list(num1)
+
+#! (DONE) Problem 8: Find Middle Node 
+
+num5 = Node(4)
+num4.next = num5
+# head = num1
+# mid = find_middle_node(head)
+# print(mid.value)
+
+#! (DONE) Problem 9: Create Double Links
+# head = Node("First")
+# tail = Node("Last")
+
+# head.next = tail
+# tail.prev = head
+
+# print(head.value, "<->", head.next.value)
+# print(tail.prev.value, "<->", tail.value)
+
+#! (DONE)Problem 10: Double to Single 
+
+Ice = DLLNode("Ice")
+Water = DLLNode("Water")
+Steam = DLLNode("Steam")
+
+Ice.next = Water
+Water.next = Steam
+
+Steam.prev = Water
+Water.prev = Steam
+
+dll_head = Ice
+
+print_list(dll_head)
+sll_head = dll_to_sll(dll_head)
+print_list(dll_head)
+
 
