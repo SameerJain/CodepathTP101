@@ -4,24 +4,110 @@ class Node:
         self.value = value
         self.next = next
 
-    def find_max(head):
-        pass
+def count_element(head,val):
+    if head is None:
+        return None
 
-    def middle_match(head,val):
-        pass
+    curr = head
+    freq_count = 0
+    while curr:
+        if curr.value == val:
+            freq_count += 1
+        curr = curr.next
+    return freq_count
 
-    def get_loop_start(head):
-        pass
+def print_list(node):
+    current = node
+    while current:
+        print(current.value, end= " -> " if current.next else " -> NULL")
+        current = current.next
+    print()
 
-    def is_palindrome(head):
-        pass
+def remove_tail_broken(head):
+    if head is None:
+        return None
+    if head.next is None:
+        return None
 
-    def reverse(head):
-        pass
+    current = head
 
-#! Problem 1: Nested Constructors
-#! Problem 2: Find Frequency 
-#! Problem 3: Remove Tail 
+    while current.next:
+        current = current.next
+    
+    current.next = None
+    return head
+
+def remove_tail_fixed(head):
+    if head is None:
+        return None
+    if head.next is None:
+        return None
+
+    current = head
+
+    while current.next.next:
+        current = current.next
+    
+    current.next = None
+    return head
+
+def find_middle_element(head):
+    slow, fast = head, head
+
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    return slow.value
+
+def is_palindrome(head):
+    pass
+
+def reverse(head):
+    pass
+
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
+node4 = Node(4)
+node1_2 = Node(1)
+node1.next = node2
+node2.next = node3
+node3.next = node4
+
+#! (DONE) Problem 1: Nested Constructors
+# test_list = Node(4,Node(3, Node(2, None)))
+# print_list(test_list)
+
+#! (DONE) Problem 2: Find Frequency 
+# print_list(node3)
+# print(f"Expected: 2 - {count_element(node3,1)}")
+
+
+#! (DONE) Problem 3: Remove Tail
+# print_list(node1)
+# remove_tail_fixed(node1)
+# print_list(node1)
+
 #! Problem 4: Find the Middle 
+
+
+# print(f"Even. Expected: 3 - {find_middle_element(node1)}")
+
+# #Odd list
+# node3.next = None
+# print(f"Odd. Expected: 2 - {find_middle_element(node1)}")
+
+# # Time: o(n)
+# # Space: o(1)
+
 #! Problem 5: Is Palindrome?
+
+node2.next = node1_2
+
+print(f"1 2 1. Expected: True - {is_palindrome(node1)}")
+
+node2.next = node3
+print(f"Expected: False - {is_palindrome(node1)}")
+
+
 #! Problem 6: Put it in Reverse
