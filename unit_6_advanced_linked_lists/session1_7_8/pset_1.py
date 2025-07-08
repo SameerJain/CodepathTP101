@@ -60,7 +60,13 @@ def find_middle_element(head):
     return slow.value
 
 def is_palindrome(head):
-    pass
+    """
+    store the values in a list
+    use 2ptrs on the list to see if its a palindrome
+    """
+    """
+    or modify half of the list to be reversed then use 2ptrs on it
+    """
 
 def reverse(head):
     pass
@@ -88,7 +94,7 @@ node3.next = node4
 # remove_tail_fixed(node1)
 # print_list(node1)
 
-#! Problem 4: Find the Middle 
+#! (DONE) Problem 4: Find the Middle 
 
 
 # print(f"Even. Expected: 3 - {find_middle_element(node1)}")
@@ -97,17 +103,21 @@ node3.next = node4
 # node3.next = None
 # print(f"Odd. Expected: 2 - {find_middle_element(node1)}")
 
-# # Time: o(n)
-# # Space: o(1)
+# Time: o(n)
+# Space: o(1)
 
-#! Problem 5: Is Palindrome?
+#! Problem 5: is palindrome?
 
-node2.next = node1_2
+node_c = Node(1)
+node_b = Node(2,node_c)
+node_a = Node(1,node_b)
 
+print_list(node_a)
 print(f"1 2 1. Expected: True - {is_palindrome(node1)}")
 
-node2.next = node3
-print(f"Expected: False - {is_palindrome(node1)}")
+node_c.next = node1
+print_list(node_a)
+print(f"Big List. Expected: False - {is_palindrome(node1)}")
 
 
-#! Problem 6: Put it in Reverse
+#! Problem 6: Put it in reverse
