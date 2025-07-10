@@ -6,7 +6,6 @@ Output: Node with value 3
 Input: head = [1, 2, 3, 4, 5, 6]
 Output: Node with value 4
 
-
 Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
 Examples:
 Input: s = "leetcode"
@@ -15,8 +14,6 @@ Input: s = "loveleetcode"
 Output: 2
 Input: s = "aabb"
 Output: -1
-
-
 
 You are given the heads of two sorted linked lists list1 and list2.
 Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
@@ -34,7 +31,7 @@ Example 3:
 
 Input: list1 = [], list2 = [0]
 Output: [0]
- 
+
 
 Constraints:
 

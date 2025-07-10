@@ -51,8 +51,8 @@ def remove_tail_fixed(head):
     current.next = None
     return head
 
-def find_middle_element(head):
     slow, fast = head, head
+def find_middle_element(head):
 
     while fast and fast.next:
         slow = slow.next
@@ -67,9 +67,39 @@ def is_palindrome(head):
     """
     or modify half of the list to be reversed then use 2ptrs on it
     """
+    value_list = []
+    if head is None:
+        return None
+    
+    curr = head
+    while curr:
+        value_list.append(curr.value)
+        curr = curr.next
+    
+    left, right = 0, len(value_list) - 1
+    print(f"ValueList: {value_list}")
+    while left < right:
+        if value_list[left] != value_list[right]:
+            
+            return False
+        left += 1
+        right -= 1
+
+    return True 
 
 def reverse(head):
-    pass
+    if head is None:
+        return None
+    
+    prev = None
+    curr = head
+
+    while curr:
+        temp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = temp
+    return prev
 
 node1 = Node(1)
 node2 = Node(2)
@@ -103,21 +133,23 @@ node3.next = node4
 # node3.next = None
 # print(f"Odd. Expected: 2 - {find_middle_element(node1)}")
 
-# Time: o(n)
-# Space: o(1)
 
-#! Problem 5: is palindrome?
 
-node_c = Node(1)
-node_b = Node(2,node_c)
-node_a = Node(1,node_b)
+#! (DONE) Problem 5: is palindrome?
 
-print_list(node_a)
-print(f"1 2 1. Expected: True - {is_palindrome(node1)}")
+# node_c = Node(1)
+# node_b = Node(2,node_c)
+# node_a = Node(1,node_b)
 
-node_c.next = node1
-print_list(node_a)
-print(f"Big List. Expected: False - {is_palindrome(node1)}")
+# print_list(node_a)
+# print(f"1 2 1. Expected: True - {is_palindrome(node_a)}")
+
+# node_c.next = node1
+# print_list(node_a)
+# print(f"Big List. Expected: False - {is_palindrome(node_a)}")
 
 
 #! Problem 6: Put it in reverse
+# print_list(node1)
+# new_node = reverse(node1)
+# print_list(new_node)
