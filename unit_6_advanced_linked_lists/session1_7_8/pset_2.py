@@ -16,10 +16,28 @@ def find_max(head):
     return max_val
 
 def middle_match(head,val):
-    pass
+    slow,fast = head, head
+
+    while fast and fast.next:
+        fast = fast.next.next
+        slow = slow.next
+
+    return slow.value == val
 
 def get_loop_start(head):
-    pass
+    """
+    determine if there is a cycle    
+    if there is not then return none
+
+    """
+    seen_before = {}
+    curr = head
+    while curr:
+        if curr in seen_before.keys():
+            return curr.value
+        seen_before[curr] = True
+        curr = curr.next
+    return None
 
 def count_critical_points(head):
     pass
@@ -31,7 +49,7 @@ def print_list(head):
     curr = head
 
     while curr:
-        print(f"{curr.value} -> ", end = " " if curr.next else "NULL")
+        print(f"{curr.value} -> ", end = " " if curr.next else "NULL\n")
         curr = curr.next
     return 
 
@@ -56,6 +74,46 @@ node1 = Node(1,node2)
 # print(f"Expected: 10: {find_max(node1)}")
 
 #! Problem 3: Remove First Value 
-#! Problem 4: Middle Match 
+# Function with a bug!
+def remove_by_value(head, val):
+    # Check if the list is empty
+    if head is None:
+        return head
+
+    # If the node to be removed is the head of the list
+    if head.value == val:
+        return head.next
+
+    # Initialize pointers
+    current = head.next
+    previous = head
+
+    # Traverse the list to find the node to remove
+    while current:
+        if current.value == val:
+            previous.next = current.next
+            current.next = None
+            return head
+        previous = current
+        current = current.next
+
+    # If no node was found with the value `val`, return the original head
+    return head
+
+# print_list(node1)
+# new_list = remove_by_value(node1,8)
+# print_list(node1)
+
+#! (DONE) Problem 4: Middle Match 
+
+# print(middle_match(node1,1))
+# Time: o(n)
+# Space: o(1)
+
 #! Problem 5: Where do we begin 
+node4.next = node2
+
+print(get_loop_start(node1))
+
 #! Problem 6: Was that a crit?
+
