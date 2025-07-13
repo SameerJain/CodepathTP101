@@ -4,7 +4,11 @@ class Node:
         self.next = next
 
     def make_circular(head):
-        pass
+        curr = head
+        while curr.next:
+            curr = curr.next
+        curr.next = head
+        return head
 
     def collect_cycle_nodes(head):
         pass
