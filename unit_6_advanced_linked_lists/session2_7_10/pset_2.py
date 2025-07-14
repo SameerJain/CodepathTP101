@@ -11,7 +11,15 @@ class Node:
         return head
 
     def collect_cycle_nodes(head):
-        pass
+        if head is None:
+            return None
+        
+
+        slow = head
+        fast = head
+
+        while fast and fast.next:
+            pass
 
     def delete_dupes(head):
         pass
@@ -19,7 +27,7 @@ class Node:
     def rotate_right(head,k):
         pass
 
-    def delete_node(head,val);
+    def delete_node(head,val):
         pass
     
     
