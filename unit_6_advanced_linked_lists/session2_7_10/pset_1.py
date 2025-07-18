@@ -216,6 +216,6 @@ num1 = Node(1,num2)
 
 #! (DONE) Problem 6: Reverse Sublist of a Linked List 
 
-new_list = reverse_between(num1,1,5)
+# new_list = reverse_between(num1,1,5)
 
-print_list(new_list)
+# print_list(new_list)
