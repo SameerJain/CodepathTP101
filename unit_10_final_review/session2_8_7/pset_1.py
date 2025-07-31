@@ -1,5 +1,6 @@
 
 #! Problem 1: Contains Duplicate
+use a hash map 
 def contains_duplicate(nums):
     pass
 

@@ -41,7 +41,7 @@ def collect_cycle_nodes(head):
     if head is None:
         return None
     curr = head
-
+    
     seen_before = {}
 
     while curr:

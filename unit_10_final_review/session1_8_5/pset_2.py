@@ -4,6 +4,7 @@ def can_place_flowerbed(flowerbed, n):
     pass
 
 #! Problem 2: Reverse Linked List 
+iterative, use a temp node and cycle the links 
 class Node:
     def __init__(self, value, next=None):
         self.value = value
@@ -17,6 +18,7 @@ def valid_word_abbreviation(word,abbr):
     pass
 
 #! Problem 4: Sum Tree
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -27,5 +29,6 @@ def check_root_sum(root):
 	pass
 
 #! Problem 5: Container with the most water
+use two pointers 
 def max_area(height):
     pass

@@ -1,9 +1,12 @@
 
 #! Problem 1: Valid Parenthesis
+plan: use a stack to store parathesises
+if there is nothing left on the stack when we are done then its ok
 def is_valid(s):
     pass
 
 #! Problem 2: Best Time to Buy & Sell Stock
+find the biggest dip and spike between two consecutive numbers and update accordingingly 
 def max_profit(prices):
     pass
 
@@ -12,6 +15,7 @@ def shuffle_merge(head_a,head_b):
     pass
 
 #! Problem 4: Group Anagrams
+sort 
 def group_anagrams(strs):
     pass
 
