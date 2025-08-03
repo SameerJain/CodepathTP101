@@ -167,7 +167,7 @@ print(mouse.next)
 dog.next = None
 
 cheese = Node("Gouda")
-
+mouse.next = cheese
 
 #! Problem 12: Chase String 
 dog = Node("Spike")

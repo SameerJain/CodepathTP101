@@ -80,6 +80,11 @@ def delete_dupes(head):
     return head
 
 def rotate_right(head,k):
+    """
+    reach the end of the list and make it circular
+    move the head of the list up by the corresponding amount 
+    get to the node before the head and break the link
+    """
     pass
 
 def delete_node(head,val):
