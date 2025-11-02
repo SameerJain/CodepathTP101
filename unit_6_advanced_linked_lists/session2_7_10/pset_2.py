@@ -113,7 +113,7 @@ num1 = Node(1,num2)
 
 
 
-#! (DONE) Problem 1: Convert a Singly Linked List to a Cicular Linked List 
+#! (DONE) Problem 1: Convert a Singly Linked List to a Circular Linked List 
 # print_list(num1)
 # new_list = make_circular(num1)
 # print_list(num1)
